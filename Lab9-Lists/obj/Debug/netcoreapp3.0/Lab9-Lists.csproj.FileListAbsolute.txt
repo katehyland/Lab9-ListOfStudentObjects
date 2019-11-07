@@ -1,0 +1,11 @@
+/Users/khyland/Documents/GrandCircusProjects/Lab9-Lists/Lab9-Lists/bin/Debug/netcoreapp3.0/Lab9-Lists
+/Users/khyland/Documents/GrandCircusProjects/Lab9-Lists/Lab9-Lists/bin/Debug/netcoreapp3.0/Lab9-Lists.deps.json
+/Users/khyland/Documents/GrandCircusProjects/Lab9-Lists/Lab9-Lists/bin/Debug/netcoreapp3.0/Lab9-Lists.runtimeconfig.json
+/Users/khyland/Documents/GrandCircusProjects/Lab9-Lists/Lab9-Lists/bin/Debug/netcoreapp3.0/Lab9-Lists.runtimeconfig.dev.json
+/Users/khyland/Documents/GrandCircusProjects/Lab9-Lists/Lab9-Lists/bin/Debug/netcoreapp3.0/Lab9-Lists.dll
+/Users/khyland/Documents/GrandCircusProjects/Lab9-Lists/Lab9-Lists/bin/Debug/netcoreapp3.0/Lab9-Lists.pdb
+/Users/khyland/Documents/GrandCircusProjects/Lab9-Lists/Lab9-Lists/obj/Debug/netcoreapp3.0/Lab9-Lists.csprojAssemblyReference.cache
+/Users/khyland/Documents/GrandCircusProjects/Lab9-Lists/Lab9-Lists/obj/Debug/netcoreapp3.0/Lab9-Lists.AssemblyInfoInputs.cache
+/Users/khyland/Documents/GrandCircusProjects/Lab9-Lists/Lab9-Lists/obj/Debug/netcoreapp3.0/Lab9-Lists.AssemblyInfo.cs
+/Users/khyland/Documents/GrandCircusProjects/Lab9-Lists/Lab9-Lists/obj/Debug/netcoreapp3.0/Lab9-Lists.dll
+/Users/khyland/Documents/GrandCircusProjects/Lab9-Lists/Lab9-Lists/obj/Debug/netcoreapp3.0/Lab9-Lists.pdb
