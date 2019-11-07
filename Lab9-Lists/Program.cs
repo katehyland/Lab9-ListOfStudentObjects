@@ -33,7 +33,7 @@ namespace Lab9_Lists
             studentList.Add(new StudentInfo("Alex", "yellow", "hot dogs", "dog"));
             studentList.Add(new StudentInfo("Bailey", "pink", "pizza", "dog"));
             studentList.Add(new StudentInfo("Cal", "orange", "garlic bread", "dog"));
-            studentList.Add(new StudentInfo("Devin", "pink", "garlic bread", "turtle"));
+            studentList.Add(new StudentInfo("Devin", "maroon", "also garlic bread", "turtle"));
 
 
             Console.WriteLine("Welcome to our class, here is a list of students.");
@@ -42,25 +42,31 @@ namespace Lab9_Lists
                 Console.WriteLine(student.name);
             }
 
-            Console.WriteLine("Would you like to add a new student? Y/N");
-            string yesNoInput = Console.ReadLine();
+            Console.WriteLine("Would you like to print a list of student info or add a new student? Type 'print' or 'add'.");
+            string input = Console.ReadLine();
 
-            if (yesNoInput == "y")
+            if (input.ToLower() == "print")
             {
-                yesNoInput.ToUpper();
+                foreach (var student in studentList)
+                {
+                    Console.WriteLine($"{student.name}'s favorite color is {student.favoriteColor}, favorite food is {student.favoriteFood}, and favorite pet is {student.favoritePet}.");
+                }
             }
 
-            Match acceptedInput = Regex.Match(yesNoInput, "Y?");
-            bool repeat = acceptedInput.Success == true;
+            input.ToLower();
+            Match addInput = Regex.Match(input, "^add?");
+
+            bool repeat = addInput.Success == true;
 
             while (repeat)
             {
                 try
                 {
-                    if (yesNoInput.ToUpper() != "Y")
+                    if (input != "add")
                     {
                         throw new NullOrEmptyInputException();
                     }
+
                     Console.WriteLine("Please enter a name");
                     string nameInput = Console.ReadLine();
                     bool nameEmpty = string.IsNullOrEmpty(nameInput);
@@ -103,6 +109,7 @@ namespace Lab9_Lists
                     {
                         Console.WriteLine($"{student.name}'s favorite color is {student.favoriteColor}, favorite food is {student.favoriteFood}, and favorite pet is {student.favoritePet}.");
                     }
+
                     Console.WriteLine("Would you like to add another new student? Y/N");
                     string repeatInput = Console.ReadLine();
 
@@ -120,7 +127,7 @@ namespace Lab9_Lists
                 }
                 catch (NullOrEmptyInputException)
                 {
-                    Console.WriteLine("Hmm. Seems like you entered \"n\" or an empty value.");
+                    Console.WriteLine("Hmm. Seems like you entered an empty value.");
                     repeat = false;
                 }
                 catch (Exception e)
