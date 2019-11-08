@@ -9,7 +9,6 @@ namespace Lab9_Lists
     public class NullOrEmptyInputException : Exception
     {
 
-        public string YesNoInput { get; }
         public string NameInput { get; }
         public string ColorInput { get; }
         public string FoodInput { get; }
@@ -30,10 +29,9 @@ namespace Lab9_Lists
         {
         }
 
-        public NullOrEmptyInputException(string message, string yesNoInput, string nameInput, string colorInput, string foodInput, string petInput)
+        public NullOrEmptyInputException(string message, string nameInput, string colorInput, string foodInput, string petInput)
             : base(message)
         {
-            YesNoInput = yesNoInput;
             NameInput = nameInput;
             ColorInput = colorInput;
             FoodInput = foodInput;

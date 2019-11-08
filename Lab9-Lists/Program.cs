@@ -22,6 +22,7 @@ namespace Lab9_Lists
                 this.favoritePet = favoritePet;
             }
         }
+
         static void Main(string[] args)
         {
             GetStudentInfo();
@@ -35,15 +36,15 @@ namespace Lab9_Lists
             studentList.Add(new StudentInfo("Cal", "orange", "garlic bread", "dog"));
             studentList.Add(new StudentInfo("Devin", "maroon", "also garlic bread", "turtle"));
 
-
-            Console.WriteLine("Welcome to our class, here is a list of students.");
-            foreach (var student in studentList)
-            {
-                Console.WriteLine(student.name);
-            }
-
             Console.WriteLine("Would you like to print a list of student info or add a new student? Type 'print' or 'add'.");
             string input = Console.ReadLine();
+
+            bool inputEmpty = string.IsNullOrEmpty(input);
+
+            if (inputEmpty == true)
+            {
+                throw new NullOrEmptyInputException("Input cannot be empty");
+            }
 
             if (input.ToLower() == "print")
             {
@@ -71,7 +72,8 @@ namespace Lab9_Lists
                     string nameInput = Console.ReadLine();
                     bool nameEmpty = string.IsNullOrEmpty(nameInput);
 
-                    if (nameEmpty == true) {
+                    if (nameEmpty == true)
+                    {
                         throw new NullOrEmptyInputException();
                     }
 
@@ -127,6 +129,11 @@ namespace Lab9_Lists
                 }
                 catch (NullOrEmptyInputException)
                 {
+                    Console.WriteLine("Hmm. Seems like you entered an empty value.");
+                    repeat = false;
+                }
+
+                catch (NullReferenceException) {
                     Console.WriteLine("Hmm. Seems like you entered an empty value.");
                     repeat = false;
                 }
